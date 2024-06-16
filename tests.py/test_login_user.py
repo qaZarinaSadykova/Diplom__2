@@ -2,12 +2,12 @@ import allure
 import requests
 from endpoint import Urls, Endpoint
 from data_test import data_failed
-from conftest import generate_random_string, create_test_data, _delete_test_data
+from conftest import create_test_data, _delete_test_data
 
 
 class TestLoginUser:
     @allure.title('Авторизация пользователя')
-    def test_login_user_positive(self, _delete_test_data):
+    def test_login_user_positive(self, create_test_data, _delete_test_data):
         user_data, token = _delete_test_data
 
         # Попытка логина с данными пользователя

@@ -1,14 +1,15 @@
 import allure
 import requests
+import helpers
 from endpoint import Endpoint, Urls
 from data_test import data_updated
-from conftest import generate_random_string, create_test_data, _delete_test_data
+from conftest import create_test_data, _delete_test_data
 
 
 class TestChangeUserData:
 
     @allure.title("Изменение данных пользователя с авторизацией")
-    def test_change_data_user(self, generate_random_string, create_test_data, _delete_test_data):
+    def test_change_data_user(self, create_test_data, _delete_test_data):
         user_data, token = _delete_test_data
         response = requests.patch(f'{Urls.MAIN_URL}{Endpoint.CHANGE_USER_DATA}',
                                   headers={'Authorization': token, 'Content-Type': 'application/json'},
