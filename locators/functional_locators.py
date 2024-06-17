@@ -20,6 +20,4 @@ class FunctionalLocators:
     BURGER_INGREDIENT = (By.XPATH, ".//img[@alt='Флюоресцентная булка R2-D3']")
     PLACE_FOR_INGREDIENTS = (By.XPATH, "//span[@class='constructor-element__text'"
                                        " and text()='Перетяните булочку сюда (верх)']")
-    # PERSONAL_ACCOUNT_BUTTON = (By.XPATH, "//p[text()='Личный Кабинет']")
-    # PASSWORD_INPUT = (By.XPATH, ".//input[@class='text input__textfield text_type_main-default' and @type='password']")
-    # PASSWORD_INPUT_IS_ACTIVE = (By.CSS_SELECTOR, ".input__container .input_status_active")
+
