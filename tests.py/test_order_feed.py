@@ -28,7 +28,7 @@ class TestOrderFeed:
         functional_page.make_an_order()
         functional_page.close_modal_clickable()
         functional_page.close_modal()
-        account_profile.go_to_personal_account()
+        forgot_password.go_to_personal_account()
         account_profile.go_to_order_history()
         is_order_id_found_at_history = order_feed.is_order_id_found_at_history()
         functional_page.go_to_order_feed()

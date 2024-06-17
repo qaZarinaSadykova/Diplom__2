@@ -13,7 +13,6 @@ class FunctionalLocators:
     ORDER_BASKET = (By.XPATH, ".//ul[@class = 'BurgerConstructor_basket__list__l9dp_']")
     COUNT_INGREDIENT = (By.XPATH, ".//p[@class = 'counter_counter__num__3nue1']")
     EMAIL_INPUT = (By.XPATH, ".//input[@name='name']")
-    PASSWORD_INPUT = (By.XPATH, ".//input[@name='Пароль']")
     ENTER_BUTTON = (By.XPATH, "//p[text()='Личный Кабинет']")
     ENTRANCE_BUTTON = (By.CLASS_NAME, "button_button__33qZ0")
     CHECKOUT = (By.XPATH, ".//button[text()='Оформить заказ']")
@@ -21,3 +20,6 @@ class FunctionalLocators:
     BURGER_INGREDIENT = (By.XPATH, ".//img[@alt='Флюоресцентная булка R2-D3']")
     PLACE_FOR_INGREDIENTS = (By.XPATH, "//span[@class='constructor-element__text'"
                                        " and text()='Перетяните булочку сюда (верх)']")
+    # PERSONAL_ACCOUNT_BUTTON = (By.XPATH, "//p[text()='Личный Кабинет']")
+    # PASSWORD_INPUT = (By.XPATH, ".//input[@class='text input__textfield text_type_main-default' and @type='password']")
+    # PASSWORD_INPUT_IS_ACTIVE = (By.CSS_SELECTOR, ".input__container .input_status_active")

@@ -6,7 +6,6 @@ from pages.base_page import BasePage
 class OrderFeedPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
-        self.driver = driver
 
     @allure.step("Клик на заказ")
     def click_to_the_order(self):

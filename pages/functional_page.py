@@ -6,7 +6,6 @@ from pages.base_page import BasePage
 class FunctionalPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
-        self.driver = driver
 
     @allure.step("Переход на страницу ленты заказов")
     def go_to_order_feed(self):
@@ -33,7 +32,7 @@ class FunctionalPage(BasePage):
     @allure.step("Закрытие модального окна")
     def close_modal(self):
         self.find_element_located_click(FunctionalLocators.CLOSE_MODAL)
-        # self.check_element_is_clickable(FunctionalLocators.ENTER_BUTTON)
+        self.check_element_is_clickable(FunctionalLocators.ENTER_BUTTON)
 
     @allure.step("Подождать пока кнопка зкрытия модального окна не станет кликабельна")
     def close_modal_clickable(self):
@@ -60,3 +59,8 @@ class FunctionalPage(BasePage):
     @allure.step("Добавление интгридиентов")
     def drag_and_drop_for_order(self):
         self.drag_and_drop(FunctionalLocators.BURGER_INGREDIENT, FunctionalLocators.PLACE_FOR_INGREDIENTS)
+
+    @allure.step("Переход на на страницу авторизации")
+    def go_to_login_page(self):
+        self.find_element_located(FunctionalLocators.ENTER_BUTTON)
+        self.click_on_element(FunctionalLocators.ENTER_BUTTON)
